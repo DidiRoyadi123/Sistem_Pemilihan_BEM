@@ -73,7 +73,7 @@ $r=mysqli_fetch_assoc($query);
 						  echo "<img src=\"../gambar/kandidat/$r[foto]\" height=150 />";  
 						}
 						else{
-						  echo "<img src=\"../gambar/kandidat/0.jpg\">";
+						  echo "<img src=\"../gambar/kandidat/0.jpg\"height=150 >";
 						}
 ?>
 					</tr>

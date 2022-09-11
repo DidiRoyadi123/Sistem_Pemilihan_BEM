@@ -6,7 +6,7 @@ unset($_SESSION['namakkasis']);
 unset($_SESSION['emailkkasis']);
 unset($_SESSION['mengajarkkasis']);
 unset($_SESSION['fotokkasis']);
-echo "<script>window.location='../'</script>";	
+echo "<script>window.location='../../index.php'</script>";	
 //session_destroy();
 //  unset($_SESSION["sessidpks"]);
 ?>

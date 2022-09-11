@@ -25,7 +25,7 @@ $j=mysqli_fetch_assoc($qjumlah);
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Login dosenstaff SEMIRA
+       Dashboard Dosen & Staff SEMIRA
         <small>Pemilihan Ketua BKM</small>
       </h1>
       <ol class="breadcrumb">
@@ -36,25 +36,29 @@ $j=mysqli_fetch_assoc($qjumlah);
 
     <!-- Main content -->
     <section class="content">
+    <h4 class="text-danger">Anda tidak dapat membatalkan pilihan yang sudah dipilih, jika sudah memilih maka pilihan tidak dapat diubah.</h4>
       <!-- Small boxes (Stat box) -->
       <div class="row">
 <?php
 //var_dump($sql);
 while($r=mysqli_fetch_array($query)){
-echo '        <div class="col-lg-3 col-xs-6">
+echo '        <div class="col-lg-4 col-xs-6">
           <!-- small box -->
           <div class="small-box bg-aqua">
             <div class="inner">';
 echo "<h3>".$r['nokandidat']."</h3>";
-echo $r['jumlahsuara']." suara";
-echo "<h2>".round(($r['jumlahsuara']/$rjs['jsuara']*100),2)."%</h2>";
+// echo $r['jumlahsuara']." suara";
+// echo "<h2>".round(($r['jumlahsuara']/$rjs['jsuara']*100),2)."%</h2>";
 echo "<b>".$r['nama']."</b>";
 echo '            </div>
             <div class="icon">
               <img src="../gambar/kandidat/'.$r['foto'].'" height="100px"/>
             </div>';
         if($ada==0){
-            echo'<a href="?m=dosenstaff&s=pilihan&id='.$r['idkandidat'].'" class="small-box-footer">Pilihan Anda? <i class="fa fa-arrow-circle-up"></i></a>';
+            echo'<a href="?m=dosenstaff&s=pilihan&id='.$r['idkandidat'].'" class="small-box-footer">Pilihan Anda? <i class="fa fa-arrow-circle-up"></i></a>
+            
+            '
+            ;
 		}else{
 			echo '<a href="#" class="small-box-footer">Anda sudah memilih <i class="fa fa-check"></i></a>';
 		}

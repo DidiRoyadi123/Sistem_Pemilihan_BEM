@@ -63,23 +63,7 @@
                   <!-- User image -->
                   <li class="user-header">
                     <img src="../gambar/kandidat/<?php echo $_SESSION['fotokkasis']; ?>" class="img-circle" alt="<?php echo $_SESSION['userkkasis']; ?>">
-                    <p>
-                      <?php echo $_SESSION['namakkasis']; ?>
-                      <small><?php echo $_SESSION['emailkkasis']; ?></small>
-                    </p>
-                  </li>
-                  <!-- Menu Body -->
-                  <li class="user-body">
-                    <div class="col-xs-4 text-center">
-                      <a href="#">SMA</a>
-                    </div>
-                    <div class="col-xs-4 text-center">
-                      <a href="#">Pro</a>
-                    </div>
-                    <div class="col-xs-4 text-center">
-                      <a href="#">ANZ</a>
-                    </div>
-                  </li>
+    </li>
                   <!-- Menu Footer-->
                   <li class="user-footer">
                     <div class="pull-left">

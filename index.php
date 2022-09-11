@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+  
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
@@ -110,25 +111,31 @@
   <?php
         include_once "sambungan.php";
         $sqljs = "SELECT sum(jumlahsuara) as jsuara FROM kandidat";
+        if($sqljs===0){
+          echo "<h2>Belum ada data Kandidat</h2>";
+        }else{
         $queryjs = mysqli_query($koneksi, $sqljs);
         $rjs = mysqli_fetch_array($queryjs);
-
         $sql = "SELECT * FROM kandidat ORDER BY nokandidat";
         $query = mysqli_query($koneksi, $sql);
         while ($r = mysqli_fetch_array($query)) {
             echo '<div class="col-lg-4 col-md-6">
             <div class="member" data-aos="zoom-in" data-aos-delay="100"> ';
             echo ' <div class="pic"><img src="login/gambar/kandidat/' . $r['foto'] . '" class="img-fluid" alt="img-about' . $r['nokandidat'] . '"></div>';
-            echo '<div class="member-info">';
+            echo '<div class="member-info">';            
             echo "<h4>No. " . $r['nokandidat'] . " - " . $r['nama'] . "</h4>";
-            echo "<h3>" . round(($r['jumlahsuara'] / $rjs['jsuara'] * 100), 2) . "%</h3>";
-            echo $r['jumlahsuara'] . " suara";
-            echo '</div>';
-            echo '</div>';
-            echo '</div>';
-        }
-        ?>
 
+            echo '<h4>Hasil Pemilihan akan dibuka pada tanggal 24/10/2022</h4>';
+            // echo "<h3>" . round(($r['jumlahsuara'] / $rjs['jsuara'] * 100), 2) . "%</h3>";
+            // echo $r['jumlahsuara'] . " suara";
+           
+
+
+            echo '</div>';
+            echo '</div>';
+            echo '</div>';
+        }}
+        ?>
 
         </div>
 
@@ -199,19 +206,19 @@
         <div class="faq-list">
           <ul>
             <li data-aos="fade-up">
-              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" class="collapse" data-bs-target="#faq-list-1">Non consectetur a erat nam at lectus urna duis? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" class="collapse" data-bs-target="#faq-list-1">Apa Itu SEMIRA? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
               <div id="faq-list-1" class="collapse show" data-bs-parent=".faq-list">
                 <p>
-                  Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.
+                  Semira adalah singkatan dari Seleksi Pemilihan Raya. Pemilihan Raya ini dilakukan untuk memilih Ketua BKM Universitas Catur Insan Cendekia.
                 </p>
               </div>
             </li>
 
             <li data-aos="fade-up" data-aos-delay="100">
-              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-2" class="collapsed">Feugiat scelerisque varius morbi enim nunc? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-2" class="collapsed">Siapa Saja Yang WAJIB Memilih? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
               <div id="faq-list-2" class="collapse" data-bs-parent=".faq-list">
                 <p>
-                  Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
+                  Pemilih adalah seluruh Warga UCIC ( Dosen,Staff dan Mahasiswa).
                 </p>
               </div>
             </li>
@@ -298,12 +305,9 @@
   <!-- ======= Footer ======= -->
   <footer id="footer">
 
-    <div class="container">
-      <div class="copyright">
-        &copy; Copyright <strong><span>didiroyadi123@gmail.com</span></strong>. 
-      </div>
-      <div class="credits">
-      
+<!-- JANGAN DIHAPUS , JIKA DIHAPUS AKAN MERUSAK STRUKTUR CODE -->
+    <?php include 'credit.php'; ?>
+
       </div>
     </div>
   </footer><!-- End Footer -->

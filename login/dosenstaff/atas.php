@@ -44,7 +44,7 @@
           <!-- mini logo for sidebar mini 50x50 pixels -->
           <span class="logo-mini">BKM</span>
           <!-- logo for regular state and mobile devices -->
-          <span class="logo-lg"><b>dosenstaff</b>SEMIRA</span>
+          <span class="logo-lg"><b>Dosen & Staff </b>SEMIRA</span>
         </a>
         <!-- Header Navbar: style can be found in header.less -->
         <nav class="navbar navbar-static-top" role="navigation">
@@ -67,18 +67,6 @@
                       <?php echo $_SESSION['namagkasis']; ?>
                       <small><?php echo $_SESSION['emailgkasis']; ?></small>
                     </p>
-                  </li>
-                  <!-- Menu Body -->
-                  <li class="user-body">
-                    <div class="col-xs-4 text-center">
-                      <a href="#">SMA</a>
-                    </div>
-                    <div class="col-xs-4 text-center">
-                      <a href="#">Pro</a>
-                    </div>
-                    <div class="col-xs-4 text-center">
-                      <a href="#">ANZ</a>
-                    </div>
                   </li>
                   <!-- Menu Footer-->
                   <li class="user-footer">

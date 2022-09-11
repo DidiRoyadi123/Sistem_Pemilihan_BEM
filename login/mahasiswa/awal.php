@@ -25,29 +25,29 @@ $j=mysqli_fetch_assoc($qjumlah);
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Login mahasiswa SEMIRA
+        Dashboard mahasiswa SEMIRA
         <small>Pemilihan Ketua BKM</small>
       </h1>
       <ol class="breadcrumb">
         <li><a href="."><i class="fa fa-dashboard"></i> Beranda</a></li>
         <li class="active">Dashboard</li>
-      </ol>
     </section>
 
     <!-- Main content -->
     <section class="content">
+    <h4 class="text-danger">Anda tidak dapat membatalkan pilihan yang sudah dipilih, jika sudah memilih maka pilihan tidak dapat diubah.</h4>
       <!-- Small boxes (Stat box) -->
       <div class="row">
 <?php
 //var_dump($sql);
 while($r=mysqli_fetch_array($query)){		  
-echo '        <div class="col-lg-3 col-xs-6">
+echo '        <div class="col-lg-4 col-xs-6">
           <!-- small box -->
           <div class="small-box bg-aqua">
             <div class="inner">';
 echo "<h3>".$r['nokandidat']."</h3>";
-echo "<h2>".($r['jumlahsuara']/$rjs['jsuara']*100)."%</h2>";
-echo $r['jumlahsuara']." suara<br><b>";
+// echo "<h2>".($r['jumlahsuara']/$rjs['jsuara']*100)."%</h2>";
+// echo $r['jumlahsuara']." suara<br><b>";
 echo $r['nama']."</b>";
 echo '            </div>
             <div class="icon">

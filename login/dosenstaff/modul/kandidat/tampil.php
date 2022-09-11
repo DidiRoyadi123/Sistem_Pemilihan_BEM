@@ -5,7 +5,6 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Login mahasiswa SEMIRA
         <small>Pemilihan Ketua BKM</small>
       </h1>
       <ol class="breadcrumb">
@@ -36,8 +35,8 @@ if(mysqli_num_rows($query)==0){
                   <th>Foto</th>
                   <th>Nama</th>
                   <th>No K</th>
-                  <th>Visi</th>
-                  <th>Misi</th>
+                  <th>Link Visi, Misi Dan Proker</th>
+                
                 </tr>
                 </thead>
                 <tbody>
@@ -50,9 +49,9 @@ if(mysqli_num_rows($query)==0){
                   <th>No</th>
                   <th>Foto</th>
                   <th>Nama</th>
-                  <th>No K</th>
-                  <th>Visi</th>
-                  <th>Misi</th>
+                  <th>No Kandidat</th>
+                  <th>Link Visi, Misi Dan Proker</th>
+                
                 </tr>
                 </thead>
                 <tbody>
@@ -65,23 +64,13 @@ if(mysqli_num_rows($query)==0){
 		echo "<td>".$r['nama']."</td>";
 		echo "<td>".$r['nokandidat']."</td>";
 		echo "<td>".$r['visi']."</td>";
-		echo "<td>".$r['misi']."</td>";
+	
 	  echo "</tr>";
 		$no++;
 	}
 }
 ?>
                 </tbody>
-                <tfoot>
-                <tr>
-                  <th>No</th>
-                  <th>Foto</th>
-                  <th>Nama</th>
-                  <th>No K</th>
-                  <th>Visi</th>
-                  <th>Misi</th>
-                </tr>
-                </tfoot>
               </table>
             </div>
             <!-- /.box-body -->

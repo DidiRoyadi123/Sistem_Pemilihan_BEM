@@ -8,7 +8,7 @@ unset($_SESSION['hakakseskasis']);
 unset($_SESSION['fotokasis']);
 setcookie('cookielogin[user]','');
 //setcookie("cookielogin[user]", $user , $waktu + (3600*24*7));
-echo "<script>window.location='../'</script>";
+echo "<script>window.location='../../index.php'</script>";
 //session_destroy();
 //  unset($_SESSION["sessidpks"]);
 ?>
