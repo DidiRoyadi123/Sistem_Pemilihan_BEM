@@ -49,7 +49,6 @@ if(mysqli_num_rows($query)==0){
                   <th>No</th>
                   <th>Foto</th>
                   <th>Nama</th>
-                  <th>No Kandidat</th>
                   <th>Link Visi, Misi Dan Proker</th>
                 
                 </tr>
@@ -62,7 +61,6 @@ if(mysqli_num_rows($query)==0){
 		echo "<td>$no</td>";
 		echo "<td><a href='?m=kandidat&s=detail&idp=".$r['idkandidat']."'><img src='../gambar/kandidat/".$r['foto']."' height='100px'/></a></td>";
 		echo "<td>".$r['nama']."</td>";
-		echo "<td>".$r['nokandidat']."</td>";
 		echo "<td>".$r['visi']."</td>";
 	
 	  echo "</tr>";

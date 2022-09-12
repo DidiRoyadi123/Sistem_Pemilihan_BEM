@@ -5,7 +5,7 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Login mahasiswa SEMIRA
+        Login Mahasiswa SEMIRA
         <small>Pemilihan Ketua BKM</small>
       </h1>
       <ol class="breadcrumb">
@@ -69,7 +69,7 @@ $r=mysqli_fetch_assoc($query);
 						  echo "<img src=\"../gambar/mahasiswa/$r[foto]\" height=150 />";  
 						}
 						else{
-						  echo "<img src=\"../gambar/mahasiswa/0.jpg\">";
+							echo "<img src=\"../gambar/mahasiswa/0.jpg\"height=150>";
 						}
 ?>
 					</tr>

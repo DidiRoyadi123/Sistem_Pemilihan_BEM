@@ -129,8 +129,6 @@
             // echo "<h3>" . round(($r['jumlahsuara'] / $rjs['jsuara'] * 100), 2) . "%</h3>";
             // echo $r['jumlahsuara'] . " suara";
            
-
-
             echo '</div>';
             echo '</div>';
             echo '</div>';
