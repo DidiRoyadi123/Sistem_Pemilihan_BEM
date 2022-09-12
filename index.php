@@ -109,7 +109,7 @@
         <div class="row" data-aos="fade-left">
 
   <?php
-        include_once "sambungan.php";
+        include_once "login/sambungan.php";
         $sqljs = "SELECT sum(jumlahsuara) as jsuara FROM kandidat";
         if($sqljs===0){
           echo "<h2>Belum ada data Kandidat</h2>";
