@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  
+
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
@@ -12,7 +12,7 @@
 
   <!-- Favicons -->
   <link href="assets/img/logo-bkm.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <!-- <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon"> -->
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
@@ -102,43 +102,44 @@
 
       <!-- ======= Team Section ======= -->
 
-    <section id="team" class="team">
-      <div class="container">
+      <section id="team" class="team">
+        <div class="container">
 
 
-        <div class="row" data-aos="fade-left">
+          <div class="row" data-aos="fade-left">
 
-  <?php
-        include_once "login/sambungan.php";
-        $sqljs = "SELECT sum(jumlahsuara) as jsuara FROM kandidat";
-        if($sqljs===0){
-          echo "<h2>Belum ada data Kandidat</h2>";
-        }else{
-        $queryjs = mysqli_query($koneksi, $sqljs);
-        $rjs = mysqli_fetch_array($queryjs);
-        $sql = "SELECT * FROM kandidat ORDER BY nokandidat";
-        $query = mysqli_query($koneksi, $sql);
-        while ($r = mysqli_fetch_array($query)) {
-            echo '<div class="col-lg-4 col-md-6">
+            <?php
+            include_once "login/sambungan.php";
+            $sqljs = "SELECT sum(jumlahsuara) as jsuara FROM kandidat";
+            if ($sqljs === 0) {
+              echo "<h2>Belum ada data Kandidat</h2>";
+            } else {
+              $queryjs = mysqli_query($koneksi, $sqljs);
+              $rjs = mysqli_fetch_array($queryjs);
+              $sql = "SELECT * FROM kandidat ORDER BY nokandidat";
+              $query = mysqli_query($koneksi, $sql);
+              while ($r = mysqli_fetch_array($query)) {
+                echo '<div class="col-lg-4 col-md-6">
             <div class="member" data-aos="zoom-in" data-aos-delay="100"> ';
-            echo ' <div class="pic"><img src="login/gambar/kandidat/' . $r['foto'] . '" class="img-fluid" alt="img-about' . $r['nokandidat'] . '"></div>';
-            echo '<div class="member-info">';            
-            echo "<h4>No. " . $r['nokandidat'] . " - " . $r['nama'] . "</h4>";
+                echo ' <div class="pic"><img src="login/gambar/kandidat/' . $r['foto'] . '" class="img-fluid" alt="img-about' . $r['nokandidat'] . '"></div>';
+                echo '<div class="member-info">';
+                echo "<h4>No. " . $r['nokandidat'] . " - " . $r['nama'] . "</h4>";
 
-            echo '<h4>Hasil Pemilihan akan dibuka pada tanggal 24/10/2022</h4>';
-            // echo "<h3>" . round(($r['jumlahsuara'] / $rjs['jsuara'] * 100), 2) . "%</h3>";
-            // echo $r['jumlahsuara'] . " suara";
-           
-            echo '</div>';
-            echo '</div>';
-            echo '</div>';
-        }}
-        ?>
+                echo '<h4>Hasil Pemilihan akan dibuka pada tanggal 24/10/2022</h4>';
+                // echo "<h3>" . round(($r['jumlahsuara'] / $rjs['jsuara'] * 100), 2) . "%</h3>";
+                // echo $r['jumlahsuara'] . " suara";
+
+                echo '</div>';
+                echo '</div>';
+                echo '</div>';
+              }
+            }
+            ?>
+
+          </div>
 
         </div>
-
-      </div>
-    </section><!-- End Team Section -->
+      </section><!-- End Team Section -->
     </section><!-- End Kandidat Section -->
 
     <!-- ======= login Section ======= -->
@@ -190,7 +191,7 @@
       </div>
     </section><!-- End Counts Section -->
 
-   
+
 
     <!-- ======= F.A.Q Section ======= -->
     <section id="faq" class="faq section-bg">
@@ -291,11 +292,32 @@
 
           <div class="col-lg-8 mt-5 mt-lg-0" data-aos="fade-left" data-aos-delay="200">
 
-          <div class="mapouter"><div class="gmap_canvas"><iframe class="gmap_iframe" width="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=Universitas cic&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe><a href="https://mcpenation.com/">https://mcpenation.com</a></div><style>.mapouter{position:relative;text-align:right;width:100%;height:400px;}.gmap_canvas {overflow:hidden;background:none!important;width:100%;height:400px;}.gmap_iframe {height:400px!important;}</style></div>
+            <div class="mapouter">
+              <div class="gmap_canvas"><iframe class="gmap_iframe" width="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=Universitas cic&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe><a href="https://mcpenation.com/">https://mcpenation.com</a></div>
+              <style>
+                .mapouter {
+                  position: relative;
+                  text-align: right;
+                  width: 100%;
+                  height: 400px;
+                }
+
+                .gmap_canvas {
+                  overflow: hidden;
+                  background: none !important;
+                  width: 100%;
+                  height: 400px;
+                }
+
+                .gmap_iframe {
+                  height: 400px !important;
+                }
+              </style>
+            </div>
+
+          </div>
 
         </div>
-
-      </div>
     </section><!-- End Contact Section -->
 
   </main><!-- End #main -->
@@ -303,10 +325,10 @@
   <!-- ======= Footer ======= -->
   <footer id="footer">
 
-<!-- JANGAN DIHAPUS , JIKA DIHAPUS AKAN MERUSAK STRUKTUR CODE -->
+    <!-- JANGAN DIHAPUS , JIKA DIHAPUS AKAN MERUSAK STRUKTUR CODE -->
     <?php include 'credit.php'; ?>
 
-      </div>
+    </div>
     </div>
   </footer><!-- End Footer -->
 
