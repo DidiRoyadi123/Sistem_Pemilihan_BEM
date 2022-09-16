@@ -55,10 +55,30 @@ echo '            </div>
               <img src="../gambar/kandidat/'.$r['foto'].'" height="100px"/>
             </div>';
         if($ada==0){
-            echo'<a href="?m=dosenstaff&s=pilihan&id='.$r['idkandidat'].'" class="small-box-footer">Pilihan Anda? <i class="fa fa-arrow-circle-up"></i></a>
-            
-            '
-            ;
+            // echo'<a href="?m=dosenstaff&s=pilihan&id='.$r['idkandidat'].'" class="small-box-footer">Pilihan Anda? <i class="fa fa-arrow-circle-up"></i></a>';
+              // modal cofirmation
+          echo '<a href="#" class="small-box-footer" data-toggle="modal" data-target="#modal-default'.$r['idkandidat'].'">Pilih <i class="fa fa-arrow-circle-right"></i></a>';
+          echo '<div class="modal fade" id="modal-default'.$r['idkandidat'].'">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header text-primary">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span></button>
+                  <h4 class="modal-title">Konfirmasi Pilihan</h4>
+                </div>
+                <div class="modal-body text-primary">
+                  <p>Apakah anda yakin memilih <b>'.$r['nama'].'</b> ?</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Tidak</button>
+                  <a href="?m=mahasiswa&s=pilihan&id='.$r['idkandidat'].'" class="btn btn-primary">Ya</a>
+                </div>
+              </div>
+              <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+          </div>
+          <!-- /.modal -->';
 		}else{
 			echo '<a href="#" class="small-box-footer">Anda sudah memilih <i class="fa fa-check"></i></a>';
 		}

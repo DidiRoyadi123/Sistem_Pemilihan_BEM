@@ -36,8 +36,9 @@ $r=mysqli_fetch_assoc($query);
               <table id="SEMIRA1" class="table table-bordered table-hover table-striped">
                 <tbody>
 					<tr>
-						<td width=150>NIS</td>
-						<td><input type="number" name="nis" value="<?php echo$r['nis'];?>" readonly /></td>
+						<td width=150>NIM</td>
+						<td><input type="number" name="nis" value="<?php echo$r['nis'];?>" readonly />
+						<small class="text-danger">NIM sementara berisi nomor random, Silahkan diperbaiki sendiri</small></td>
 					</tr>
 					<tr>
 						<td width=150>Nama Pengguna*</td>
@@ -45,7 +46,7 @@ $r=mysqli_fetch_assoc($query);
 					</tr>
 					<tr>
 						<td>Sandi</td>
-						<td><input type="password" name="password" placeholder="Password" size="25px" maxlength="32px" /><small>Kosongkan jika tak diubah</small></td>
+						<td><input type="password" name="password" placeholder="Password" size="25px" maxlength="32px" /><small> Kosongkan jika tak diubah</small></td>
 					</tr>
 					<tr>
 						<td>Nama Lengkap*</td>

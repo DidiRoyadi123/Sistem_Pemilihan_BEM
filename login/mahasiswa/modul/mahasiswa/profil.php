@@ -21,6 +21,7 @@
           <div class="box">
             <div class="box-header">
               <h3 class="box-title">Profil mahasiswa</h3>
+			  <h4 class="text-danger">Jika ada kesalahan biodata bisa di edit sendiri menggunakan button edit dibawah</h4>
             </div>
             <!-- /.box-header -->
             <div class="box-body">
@@ -41,10 +42,10 @@ $r=mysqli_fetch_assoc($query);
 						<td>Nama Lengkap</td>
 						<td><?php echo$r['nama'];?></td>
 					</tr>
-					<tr>
+					<!-- <tr>
 						<td>Jenis Kelamin</td>
 						<td><?php echo $r['jk']=='L'?'Laki-laki':'Perempuan';?></td>
-					</tr>
+					</tr> -->
 					<tr>
 						<td>Kelas</td>
 						<td><?php echo$_SESSION['kelasskasis'];?></td>

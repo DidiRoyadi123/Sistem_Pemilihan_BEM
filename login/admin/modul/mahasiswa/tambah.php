@@ -21,6 +21,8 @@
           <div class="box">
             <div class="box-header">
               <h3 class="box-title">Form Tambah mahasiswa</h3>
+			  <marquee behavior="" direction="right"><h4 class="text-danger">Utamakan isi form yang memiliki bintang. SEMANGAT GUYS !!!!!  <img width="64" alt="Icon train" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Icon_train.svg/128px-Icon_train.svg.png">
+				</h5></h4></marquee>
             </div>
             <!-- /.box-header -->
             <div class="box-body">
@@ -29,15 +31,15 @@
               <table id="SEMIRA1" class="table table-bordered table-hover table-striped">
                 <tbody>
 					<tr>
-						<td>Username</td>
+						<td>Username*</td>
 						<td><input type="text" name="username" placeholder="Username" size="25px" maxlength="25px" /><small> Kosongkan untuk username=No Induk mahasiswa</small></td>
 					</tr>
 					<tr>
-						<td>Password</td>
+						<td>Password*</td>
 						<td><input type="password" name="password" placeholder="Password" size="25px" /><small> Kosongkan untuk Password=Nama Lengkap</small></td>
 					</tr>
 					<tr>
-						<td width=174>NIS*</td>
+						<td width=174>NIM*</td>
 						<td><input type="number" name="nis" placeholder="Nomor Induk" size="10px" maxlength="9px" required /><small> maksimal 9 karakter</small></td>
 					</tr>
 					<tr>
@@ -82,7 +84,7 @@ while($r=mysqli_fetch_assoc($query)){
 						</td>
 					</tr>
 					<tr>
-						<td>Aktifkan</td>
+						<td>Aktifkan*</td>
 						<td><input type="radio" name="aktif" id="aktifY" value="Y" />Ya &nbsp;&nbsp;
 						<input type="radio" name="aktif" id="aktifT" value="T" checked />Tidak</td>
 					</tr>
