@@ -125,9 +125,9 @@
                 echo '<div class="member-info">';
                 echo "<h4>No. " . $r['nokandidat'] . " - " . $r['nama'] . "</h4>";
 
-                echo '<h4>Hasil Pemilihan akan dibuka pada tanggal 24/10/2022</h4>';
-                // echo "<h3>" . round(($r['jumlahsuara'] / $rjs['jsuara'] * 100), 2) . "%</h3>";
-                // echo $r['jumlahsuara'] . " suara";
+                // echo '<h4>Hasil Pemilihan akan dibuka pada tanggal 24/10/2022</h4>';
+                echo "<h3>" . round(($r['jumlahsuara'] / $rjs['jsuara'] * 100), 2) . "%</h3>";
+                echo $r['jumlahsuara'] . " suara";
 
                 echo '</div>';
                 echo '</div>';

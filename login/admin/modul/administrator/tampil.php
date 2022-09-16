@@ -59,7 +59,10 @@ if(mysqli_num_rows($query)==0){
 		echo "<td>".$r['email']."</td>";
 		echo "<td>".$r['hakakses']."</td>";
 		echo "<td>".$r['aktif']."</td>";
-		echo '<td><a href="index.php?m=admin&s=edit&idp='.$r['idpengguna'].'">Edit</a> | <a href="index.php?m=admin&s=hapus&idp='.$r['idpengguna'].'" onclick="return confirm(\'Yakin Akan dihapus?\')">Hapus</a></td>';
+    if ($r['idpengguna']==1) {
+      echo '<td> <a href="index.php?m=admin&s=edit&idp='.$r['idpengguna'].'">Edit</a> </td>';
+    } else {
+		echo '<td><a href="index.php?m=admin&s=edit&idp='.$r['idpengguna'].'">Edit</a> | <a href="index.php?m=admin&s=hapus&idp='.$r['idpengguna'].'" onclick="return confirm(\'Yakin Akan dihapus?\')">Hapus</a></td>';};
 	  echo "</tr>";
 		$no++;
 	}
