@@ -32,11 +32,11 @@
                 <tbody>
 					<tr>
 						<td>Username*</td>
-						<td><input type="text" name="username" placeholder="Username" size="25px" maxlength="25px" /><small> Kosongkan untuk username=No Induk mahasiswa</small></td>
+						<td><input type="text" name="username" placeholder="Username" size="50px" maxlength="50px" /><small> Kosongkan untuk username=No Induk mahasiswa</small></td>
 					</tr>
 					<tr>
 						<td>Password*</td>
-						<td><input type="password" name="password" placeholder="Password" size="25px" /><small> Kosongkan untuk Password=Nama Lengkap</small></td>
+						<td><input type="password" name="password" placeholder="Password" size="50px" /><small> Kosongkan untuk Password=Nama Lengkap</small></td>
 					</tr>
 					<tr>
 						<td width=174>NIM*</td>

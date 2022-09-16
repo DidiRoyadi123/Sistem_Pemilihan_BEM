@@ -30,11 +30,11 @@
                 <tbody>
 					<tr>
 						<td width=174>Nama Pengguna</td>
-						<td><input type="text" name="username" placeholder="Username" size="25px" maxlength="25px" /><small>Kosongkan untuk username=No Induk dosenstaff</small></td>
+						<td><input type="text" name="username" placeholder="Username" size="50px" maxlength="25px" /><small>Kosongkan untuk username=No Induk dosenstaff</small></td>
 					</tr>
 					<tr>
 						<td>Sandi</td>
-						<td><input type="password" name="password" placeholder="Password" size="25px" maxlength="32px"/><small>Kosongkan untuk Password=Nama Lengkap dosenstaff</small></td>
+						<td><input type="password" name="password" placeholder="Password" size="50px" maxlength="32px"/><small>Kosongkan untuk Password=Nama Lengkap dosenstaff</small></td>
 					</tr>
 					<tr>
 						<td>No Induk dosenstaff*</td>

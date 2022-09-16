@@ -3,6 +3,6 @@
 $host="localhost";
 $userdb="root";
 $passdb="";
-$namadb="semira2";
+$namadb="semira";
 $koneksi=mysqli_connect($host,$userdb,$passdb,$namadb);
 ?>

@@ -21,6 +21,7 @@
           <div class="box">
             <div class="box-header">
               <h3 class="box-title">Profil dosenstaff</h3>
+			  <h4 class="text-danger">Jika ada kesalahan biodata bisa di edit sendiri menggunakan button edit dibawah</h4>
             </div>
             <!-- /.box-header -->
             <div class="box-body">
