@@ -30,7 +30,7 @@
                 <tbody>
 					<tr>
 						<td width=174>Nama Pengguna</td>
-						<td><input type="text" name="username" placeholder="Username" size="50px" maxlength="25px" /><small>Kosongkan untuk username=No Induk dosenstaff</small></td>
+						<td><input type="text" name="username" placeholder="Username" size="50px" maxlength="50px" /><small>Kosongkan untuk username=No Induk dosenstaff</small></td>
 					</tr>
 					<tr>
 						<td>Sandi</td>
