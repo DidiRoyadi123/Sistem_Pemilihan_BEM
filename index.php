@@ -121,13 +121,17 @@
               while ($r = mysqli_fetch_array($query)) {
                 echo '<div class="col-lg-4 col-md-6">
             <div class="member" data-aos="zoom-in" data-aos-delay="100"> ';
-                echo ' <div class="pic"><img src="login/gambar/kandidat/' . $r['foto'] . '" class="img-fluid" alt="img-about' . $r['nokandidat'] . '"></div>';
+            if ($r['foto'] != "") {
+                echo ' <div class="pic"><img src="login/gambar/kandidat/' . $r['foto'] . '" class="img-fluid" alt="img-about' . $r['nokandidat'] . '"></div>';}
+                else {
+                  echo '<div class="pic"><img src="login/gambar/kandidat/0.jpg" class="img-fluid" alt="img-about' . $r['nokandidat'] . '"></div>';
+                }
                 echo '<div class="member-info">';
                 echo "<h4>No. " . $r['nokandidat'] . " - " . $r['nama'] . "</h4>";
 
-                // echo '<h4>Hasil Pemilihan akan dibuka pada tanggal 24/10/2022</h4>';
-                echo "<h3>" . round(($r['jumlahsuara'] / $rjs['jsuara'] * 100), 2) . "%</h3>";
-                echo $r['jumlahsuara'] . " suara";
+                echo '<h4>Hasil Pemilihan akan dibuka pada tanggal 24/10/2022</h4>';
+                // echo "<h3>" . round(($r['jumlahsuara'] / $rjs['jsuara'] * 100), 2) . "%</h3>";
+                // echo $r['jumlahsuara'] . " suara";
 
                 echo '</div>';
                 echo '</div>';
