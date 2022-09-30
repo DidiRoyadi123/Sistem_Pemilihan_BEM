@@ -124,7 +124,9 @@
             if ($r['foto'] != "") {
                 echo ' <div class="pic"><img src="login/gambar/kandidat/' . $r['foto'] . '" class="img-fluid" alt="img-about' . $r['nokandidat'] . '"></div>';}
                 else {
-                  echo '<div class="pic"><img src="login/gambar/kandidat/0.jpg" class="img-fluid" alt="img-about' . $r['nokandidat'] . '"></div>';
+                  echo '<div class="pic">
+                  <img src="login/gambar/kandidat/0.jpg" class="img-fluid" alt="img-about' . $r['nokandidat'] . '"height=150 >
+                  </div>';
                 }
                 echo '<div class="member-info">';
                 echo "<h4>No. " . $r['nokandidat'] . " - " . $r['nama'] . "</h4>";
@@ -132,6 +134,12 @@
                 echo '<h4>Hasil Pemilihan akan dibuka pada tanggal 24/10/2022</h4>';
                 // echo "<h3>" . round(($r['jumlahsuara'] / $rjs['jsuara'] * 100), 2) . "%</h3>";
                 // echo $r['jumlahsuara'] . " suara";
+                
+
+                // button to visi misi
+                echo "
+                <h4><a href='$r[visi]' class='btn btn-primary btn-block'  target='_blank'> Lihat Visi Misi</a></h4>
+                ";
 
                 echo '</div>';
                 echo '</div>';
