@@ -1,4 +1,4 @@
-# Semira
+# Semira(Seleksi pemilihan raya)
 ini adalah repository dari aplikasi e-voting yang dapat digunakan untuk melakukan pemilihan ketua umum OSIS/UKM/HIMA/BEM
 
 # Tampilan Landing Page
